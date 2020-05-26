@@ -51,3 +51,8 @@ const obs = Observer.getInstance();
 obs.setData(books);
 obs.check();
 
+Output('------------State------------');
+
+import State from './State/Main';
+const stt = State.getInstance();
+stt.check();
