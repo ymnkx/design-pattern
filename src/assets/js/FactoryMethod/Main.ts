@@ -1,27 +1,25 @@
 import { BT } from '../BookType';
 import BookFactory from "./book/BookFactory";
-import Book from "./book/Book";
 import Output from '../Output';
 
 export default class Main {
   private static instance: Main;
-  private static data:  BT[] = [];
-  private books: Book[] = [];
-
-  private constructor() {}
+  private data: BT[] = [];
 
   public check(): void {
     const factory = new BookFactory();
-    for (let item of Main.data) {
+    for (let item of this.data) {
       const book = factory.create(item.title);
-      this.books.push(book);
       book.use();
     }
     Output('一覧：[' + factory.getBookList().join(', ') + ']');
   }
 
-  public static getInstance(data: BT[]): Main {
+  public setData(data: BT[]): void {
     this.data = data;
+  }
+
+  public static getInstance(): Main {
     this.instance = new Main();
     return this.instance;
   }
