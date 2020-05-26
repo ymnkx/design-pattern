@@ -5,14 +5,12 @@ import Output from '../Output';
 
 export default class Main {
   private static instance: Main;
-  private static data: BT[];
-
-  private constructor() {}
+  private data: BT[] = [];
 
   public check() {
     let bookShelf = new BookShelf();
 
-    for (let item of Main.data) {
+    for (let item of this.data) {
       const book = new Book(item.title);
       bookShelf.appendBook(book);
     }
@@ -24,8 +22,11 @@ export default class Main {
     }
   }
 
-  public static getInstance(data: BT[]) {
+  public setData(data: BT[]): void {
     this.data = data;
+  }
+
+  public static getInstance(): Main {
     this.instance = new Main();
     return this.instance;
   }

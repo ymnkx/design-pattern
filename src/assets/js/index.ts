@@ -16,29 +16,38 @@ const books: BT[] = [
   },
 ];
 
+window.addEventListener('load', () => {
+  const codeArea = document.getElementById('code');
+  if (codeArea) {
+    codeArea.innerHTML = JSON.stringify(books, null, 2);
+  }
+});
+
 Output('------------Template Method------------');
 
 import TemplateMethod from './TemplateMethod/Main'
-const tm = TemplateMethod.getInstance(books);
-tm.check();
+const tmp = TemplateMethod.getInstance();
+tmp.setData(books);
+tmp.check();
 
 Output('------------Factory Method------------');
 
 import FactoryMethod from './FactoryMethod/Main'
-const fm = FactoryMethod.getInstance(books);
+const fm = FactoryMethod.getInstance();
+fm.setData(books);
 fm.check();
 
 Output('------------Iterator------------');
 
 import Iterator from './Iterator/Main'
-const it = Iterator.getInstance(books);
+const it = Iterator.getInstance();
+it.setData(books);
 it.check();
 
 Output('------------Observer------------');
 
 import Observer from './Observer/Main';
-const obs = Observer.getInstance(books);
+const obs = Observer.getInstance();
+obs.setData(books);
 obs.check();
-
-
 

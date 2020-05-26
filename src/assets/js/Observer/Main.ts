@@ -5,9 +5,7 @@ import AuthorObserver from "./AuthorObserver";
 
 export default class Main {
   private static instance: Main;
-  private static data: BT[];
-
-  private constructor () {}
+  private data: BT[] = [];
 
   public check(): void {
     const bookGenerator = new BookGenerator();
@@ -15,11 +13,14 @@ export default class Main {
     bookGenerator.addObserver(titleObserver);
     const authorObserver = new AuthorObserver();
     bookGenerator.addObserver(authorObserver);
-    bookGenerator.execute(Main.data);
+    bookGenerator.execute(this.data);
   }
 
-  public static getInstance(data:BT[]) {
+  public setData(data:BT[]): void {
     this.data = data;
+  }
+
+  public static getInstance(): Main {
     this.instance = new Main();
     return this.instance;
   }

@@ -3,21 +3,20 @@ import BookDisplay from './BookDisplay'
 
 export default class Main {
   private static instance: Main;
-  private static data: BT[] = [];
-  private books: BookDisplay[] = [];
-
-  private constructor() {}
+  private data: BT[] = [];
 
   public check(): void {
-    for (let item of Main.data) {
-      const book = new BookDisplay(item.title)
-      this.books.push(book);
+    for (let item of this.data) {
+      const book = new BookDisplay(item.title);
       book.display();
     }
   }
 
-  public static getInstance(data: BT[]): Main {
+  public setData(data: BT[]): void {
     this.data = data;
+  }
+
+  public static getInstance(): Main {
     this.instance = new Main();
     return this.instance;
   }
