@@ -10,7 +10,7 @@ export default class Context {
     this.state = FreeState.getInstance();
   }
 
-  public setState(param:number) :void {
+  public setParam(param:number) :void {
     this.param = param;
     this.state.doRead(this, param);
   }

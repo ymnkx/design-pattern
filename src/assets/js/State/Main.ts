@@ -6,11 +6,11 @@ export default class Main {
   public check(): void {
     const context = new Context();
     // 数値は忙しさ具合。50以下は暇。
-    context.setState(20);
+    context.setParam(20);
     context.getRecord();
-    context.setState(80);
+    context.setParam(80);
     context.getRecord();
-    context.setState(~~(Math.random()*100));
+    context.setParam(~~(Math.random()*100));
     context.getRecord();
   }
 
