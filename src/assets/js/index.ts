@@ -56,3 +56,10 @@ Output('------------State------------');
 import State from './State/Main';
 const stt = State.getInstance();
 stt.check();
+
+Output('------------Decorator------------');
+
+import Decorator from './Decorator/Main';
+const deco = Decorator.getInstance();
+deco.setData(books);
+deco.check();
