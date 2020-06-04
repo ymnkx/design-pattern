@@ -63,3 +63,9 @@ import Decorator from './Decorator/Main';
 const deco = Decorator.getInstance();
 deco.setData(books);
 deco.check();
+
+Output('------------Builder------------');
+import Builder from './Builder/Main';
+const bld = Builder.getInstance();
+bld.setData(books);
+bld.check();
