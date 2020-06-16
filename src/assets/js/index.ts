@@ -69,3 +69,9 @@ import Builder from './Builder/Main';
 const bld = Builder.getInstance();
 bld.setData(books);
 bld.check();
+
+Output('------------Adapter------------');
+import Adapter from './Adapter/Main';
+const adp = Adapter.getInstance();
+adp.setData(books);
+adp.check();
