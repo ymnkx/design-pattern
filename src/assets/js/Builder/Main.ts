@@ -1,14 +1,14 @@
-import { BT } from "../BookType";
-import BookBuilder from "./BookBuilder";
-import Director from "./Director";
-import Output from "../Output";
-import DeluxeBookBuilder from "./DeluxeBookBuilder";
+import { BT } from '../BookType';
+import BookBuilder from './BookBuilder';
+import Director from './Director';
+import Output from '../Output';
+import DeluxeBookBuilder from './DeluxeBookBuilder';
 
 export default class Main {
   private static instance: Main;
   private data: BT[] = [];
 
-  public check():void {
+  public check(): void {
     const book = new BookBuilder();
     const director = new Director(book);
     director.construct(this.data[0]);
@@ -20,7 +20,7 @@ export default class Main {
     Output(deluxeBook.getResult());
   }
 
-  public setData(data:BT[]):void {
+  public setData(data: BT[]): void {
     this.data = data;
   }
 

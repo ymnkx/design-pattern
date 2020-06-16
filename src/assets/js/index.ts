@@ -1,18 +1,18 @@
-import { BT } from './BookType'
+import { BT } from './BookType';
 import Output from './Output';
 
 const books: BT[] = [
   {
-    title: "幼年期の終り",
-    author: "アーサー・C・クラーク"
+    title: '幼年期の終り',
+    author: 'アーサー・C・クラーク',
   },
   {
-    title: "タイタンの妖女",
-    author: "カート・ヴォネガット・ジュニア"
+    title: 'タイタンの妖女',
+    author: 'カート・ヴォネガット・ジュニア',
   },
   {
-    title: "夏への扉",
-    author: "ロバート・A・ハインライン"
+    title: '夏への扉',
+    author: 'ロバート・A・ハインライン',
   },
 ];
 
@@ -25,21 +25,21 @@ window.addEventListener('load', () => {
 
 Output('------------Template Method------------');
 
-import TemplateMethod from './TemplateMethod/Main'
+import TemplateMethod from './TemplateMethod/Main';
 const tmp = TemplateMethod.getInstance();
 tmp.setData(books);
 tmp.check();
 
 Output('------------Factory Method------------');
 
-import FactoryMethod from './FactoryMethod/Main'
+import FactoryMethod from './FactoryMethod/Main';
 const fm = FactoryMethod.getInstance();
 fm.setData(books);
 fm.check();
 
 Output('------------Iterator------------');
 
-import Iterator from './Iterator/Main'
+import Iterator from './Iterator/Main';
 const it = Iterator.getInstance();
 it.setData(books);
 it.check();
