@@ -23,6 +23,13 @@ window.addEventListener('load', () => {
   }
 });
 
+Output('------------Strategy------------');
+import Strategy from './Strategy/Main';
+const str = Strategy.getInstance();
+str.setData(books);
+str.check();
+
+
 Output('------------Template Method------------');
 
 import TemplateMethod from './TemplateMethod/Main';
