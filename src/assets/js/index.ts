@@ -1,18 +1,18 @@
-import { BT } from './BookType'
+import { BT } from './BookType';
 import Output from './Output';
 
 const books: BT[] = [
   {
-    title: "幼年期の終り",
-    author: "アーサー・C・クラーク"
+    title: '幼年期の終り',
+    author: 'アーサー・C・クラーク',
   },
   {
-    title: "タイタンの妖女",
-    author: "カート・ヴォネガット・ジュニア"
+    title: 'タイタンの妖女',
+    author: 'カート・ヴォネガット・ジュニア',
   },
   {
-    title: "夏への扉",
-    author: "ロバート・A・ハインライン"
+    title: '夏への扉',
+    author: 'ロバート・A・ハインライン',
   },
 ];
 
@@ -23,23 +23,30 @@ window.addEventListener('load', () => {
   }
 });
 
+Output('------------Strategy------------');
+import Strategy from './Strategy/Main';
+const str = Strategy.getInstance();
+str.setData(books);
+str.check();
+
+
 Output('------------Template Method------------');
 
-import TemplateMethod from './TemplateMethod/Main'
+import TemplateMethod from './TemplateMethod/Main';
 const tmp = TemplateMethod.getInstance();
 tmp.setData(books);
 tmp.check();
 
 Output('------------Factory Method------------');
 
-import FactoryMethod from './FactoryMethod/Main'
+import FactoryMethod from './FactoryMethod/Main';
 const fm = FactoryMethod.getInstance();
 fm.setData(books);
 fm.check();
 
 Output('------------Iterator------------');
 
-import Iterator from './Iterator/Main'
+import Iterator from './Iterator/Main';
 const it = Iterator.getInstance();
 it.setData(books);
 it.check();
@@ -56,3 +63,22 @@ Output('------------State------------');
 import State from './State/Main';
 const stt = State.getInstance();
 stt.check();
+
+Output('------------Decorator------------');
+
+import Decorator from './Decorator/Main';
+const deco = Decorator.getInstance();
+deco.setData(books);
+deco.check();
+
+Output('------------Builder------------');
+import Builder from './Builder/Main';
+const bld = Builder.getInstance();
+bld.setData(books);
+bld.check();
+
+Output('------------Adapter------------');
+import Adapter from './Adapter/Main';
+const adp = Adapter.getInstance();
+adp.setData(books);
+adp.check();
