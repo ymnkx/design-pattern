@@ -1,4 +1,4 @@
-import { BT } from './BookType';
+// import { BT } from './BookType';
 import Output from './Output';
 
 // const books: BT[] = [
@@ -17,11 +17,16 @@ import Output from './Output';
 // ];
 
 
-Output('------------Flyweight------------');
+Output('------------Prototype------------');
+import Prototype from './Prototype/Main';
+const pt = Prototype.getInstance();
+pt.check();
 
-import Flyweight from './Flyweight/Main';
-const fw = Flyweight.getInstance();
-fw.check();
+// Output('------------Flyweight------------');
+
+// import Flyweight from './Flyweight/Main';
+// const fw = Flyweight.getInstance();
+// fw.check();
 
 // window.addEventListener('load', () => {
 //   const codeArea = document.getElementById('code');
