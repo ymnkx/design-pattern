@@ -17,10 +17,15 @@ import Output from './Output';
 // ];
 
 
-Output('------------Prototype------------');
-import Prototype from './Prototype/Main';
-const pt = Prototype.getInstance();
-pt.check();
+Output('------------Interpreter------------');
+import Interpreter from './Interpreter/Main'
+const ip = Interpreter.getInstance();
+ip.check();
+
+// Output('------------Prototype------------');
+// import Prototype from './Prototype/Main';
+// const pt = Prototype.getInstance();
+// pt.check();
 
 // Output('------------Flyweight------------');
 
